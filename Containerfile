@@ -15,7 +15,7 @@ RUN apt update -y && \
 WORKDIR /opt
 RUN git clone https://github.com/SVC-Sigmap/irc3-system.git && \
     pip install -r irc3-system/requirements.txt
-EXPOSE 8080/tcp
-EXPOSE 8080/udp
+# EXPOSE 8080/tcp
+# EXPOSE 8080/udp
 # CMD ["/opt/irc3-system/main.py"]
 CMD ["/bin/bash", "-c", "source /opt/ros/humble/setup.bash;/opt/irc3-system/main.py"]
