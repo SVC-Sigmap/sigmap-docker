@@ -12,9 +12,7 @@ Workflows can also be manually triggered by repo maintainers.
 Podman one-liner:
 ```
 podman pull ghcr.io/svc-sigmap/sigmap-backend:latest && \
-podman run -it --net="host" --name="sigmap" sigmap-backend && \
-podman stop sigmap && \
-podman rm sigmap
+podman run -it --net="host" --name="sigmap" --rm sigmap-backend
 ```
 **Note:** Podman-compose doesn't like host networking, so the we're using the ugly solution of manually tearing down.
 
