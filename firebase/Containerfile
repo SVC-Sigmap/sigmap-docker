@@ -14,7 +14,9 @@ RUN apt update -y && \
     echo "source /opt/ros/humble/setup.bash" >> /root/.bashrc
 WORKDIR /opt
 RUN git clone https://github.com/SVC-Sigmap/irc3-system.git && \
+    cd irc3-system && \
     git switch firebase_auth && \
+    cd .. && \
     pip install -r irc3-system/requirements.txt
 # EXPOSE 8080/tcp
 # EXPOSE 8080/udp
