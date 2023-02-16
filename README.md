@@ -21,8 +21,3 @@ For developers on Windows and MacOS (**NOTE**: Signal Scanning will *not* work o
 podman pull ghcr.io/svc-sigmap/sigmap-backend:latest && \
 podman run -it -p 8080:8080 --name="sigmap" --rm sigmap-backend
 ```
-
-Running tests:
-```
-podman pull ghcr.io/svc-sigmap/sigmap-backend-tests:latest && \
-podman run -it --net="host" --name="sigmap-tests" --rm sigmap-backend-tests
