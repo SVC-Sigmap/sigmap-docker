@@ -16,14 +16,9 @@ podman run -it --net="host" --name="sigmap" --rm sigmap-backend
 ```
 **Note:** Podman-compose doesn't like host networking, so the we're using the ugly solution of manually tearing down.
 
-
-### Docker
-
-Docker install one-liner:
-
+For developers on Windows and MacOS:
 ```
-docker pull ghcr.io/svc-sigmap/sigmap-backend:latest && docker run -it --net="host" sigmap-backend
+podman pull ghcr.io/svc-sigmap/sigmap-backend:latest && \
+podman run -it -p 8080:8080 --name="sigmap" --rm sigmap-backend
 ```
-**Note:** Docker may need `--privileged` flag to gather WiFi data. This is not needed for Podman.
-We should probably add a compose file for this later.
 
