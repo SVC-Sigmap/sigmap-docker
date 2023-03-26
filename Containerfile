@@ -1,4 +1,4 @@
-FROM arm64v8/ubuntu:22.04
+FROM arm64v8/ubuntu
 ENV DEBIAN_FRONTEND noninteractive
 RUN apt update -y && \
     apt install -y software-properties-common -y && \
